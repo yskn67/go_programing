@@ -7,7 +7,11 @@ import (
 
 func process(w http.ResponseWriter, r *http.Request) {
 	r.ParseForm()
-	fmt.Fprintln(w, r.Form)
+	fmt.Fprintln(w, "1.", r.Form)
+	fmt.Fprintln(w, "2.", r.FormValue("hello"))
+	fmt.Fprintln(w, "3.", r.PostFormValue("hello"))
+	fmt.Fprintln(w, "4.", r.PostForm)
+	fmt.Fprintln(w, "5.", r.MultipartForm)
 }
 
 func main() {
