@@ -5,12 +5,7 @@
         <title>Go Web Programming</title>
     </head>
     <body>
-        <ul>
-        {{ range . }}
-            <li>{{ . }}</li>
-        {{ else }}
-            <li>表示するものがありません</li>
-        {{ end }}
-        </ul>
+        <div>日付は{{ . | fdate }}です</div>
+        <div>日付は{{ fdate . }}です</div>
     </body>
-</html> 
+</html>
